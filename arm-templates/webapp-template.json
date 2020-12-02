@@ -111,7 +111,7 @@
                         },
                         {
                             "name": "PIECEWISE_DB_DATABASE",
-                            "value": "piecewise"
+                            "value": "piecewisedb"
                         },
                         {
                             "name": "PIECEWISE_DB_PORT",
