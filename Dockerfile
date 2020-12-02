@@ -48,7 +48,7 @@ HEALTHCHECK --interval=5s \
 
 ENV NODE_ENV=production
 
-USER node
+#USER node
 
 ENTRYPOINT ["./docker-entrypoint.sh"]
 CMD ["start"]
