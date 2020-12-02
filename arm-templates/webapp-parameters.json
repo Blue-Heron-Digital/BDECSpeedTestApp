@@ -1,0 +1,46 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "PIECEWISE_DB_HOST" : {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/c0a93b39-e4be-49b0-81b7-01b81860a180/resourceGroups/piecewise-pre-env/providers/Microsoft.KeyVault/vaults/piecewise-keyvault"
+                },
+                "secretName": "PIECEWISE-DB-HOST"
+            }
+        },
+        "PIECEWISE_ADMIN_USERNAME" : {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/c0a93b39-e4be-49b0-81b7-01b81860a180/resourceGroups/piecewise-pre-env/providers/Microsoft.KeyVault/vaults/piecewise-keyvault"
+                },
+                "secretName": "PIECEWISE-ADMIN-USERNAME"
+            }
+        },
+        "PIECEWISE_ADMIN_PASSWORD" : {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/c0a93b39-e4be-49b0-81b7-01b81860a180/resourceGroups/piecewise-pre-env/providers/Microsoft.KeyVault/vaults/piecewise-keyvault"
+                },
+                "secretName": "PIECEWISE-ADMIN-PASSWORD"
+            }
+        },
+        "PIECEWISE_DB_USERNAME" : {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/c0a93b39-e4be-49b0-81b7-01b81860a180/resourceGroups/piecewise-pre-env/providers/Microsoft.KeyVault/vaults/piecewise-keyvault"
+                },
+               "secretName": "PIECEWISE-DB-USERNAME"
+            }
+        },
+        "PIECEWISE_DB_PASSWORD" : {
+             "reference": {
+                 "keyVault": {
+                     "id": "/subscriptions/c0a93b39-e4be-49b0-81b7-01b81860a180/resourceGroups/piecewise-pre-env/providers/Microsoft.KeyVault/vaults/piecewise-keyvault"
+                 },
+                 "secretName": "PIECEWISE-DB-PASSWORD"
+            }
+        }
+    }
+}
