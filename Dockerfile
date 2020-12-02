@@ -34,7 +34,7 @@ FROM node:14-alpine
 
 RUN apk add --update --no-cache curl
 
-EXPOSE 3000
+EXPOSE 80
 
 WORKDIR /app
 
@@ -44,7 +44,7 @@ COPY ./docker-entrypoint.sh .
 HEALTHCHECK --interval=5s \
             --timeout=5s \
             --retries=6 \
-            CMD curl -fs http://localhost:3000/ || exit 1
+            CMD curl -fs http://localhost:80/ || exit 1
 
 ENV NODE_ENV=production
 
