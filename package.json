@@ -44,7 +44,7 @@
     "db:seeds": "knex --esm seed:run",
     "start:backend": "node dist/backend",
     "start": "npm run start:backend",
-    "start:dev": "nodemon -e css,js,jsx,html --ignore dist --ignore src/frontend/imported.js --exec 'npm run build:dev && npm run start'"
+    "start:dev": "nodemon -e css,js,jsx,html --ignore dist --ignore src/frontend/imported.js --exec npm run build:dev && npm run start"
   },
   "engines": {
     "node": ">=12.0"
