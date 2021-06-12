@@ -156,7 +156,7 @@ export default function Basic() {
   } else {
     return (
       <Container fluid="lg" className={'mt-4 mb-4'}>
-        <NavBar></NavBar>
+        <NavBar />
         <div>
           <img src={logo} aria-hidden="true" {...image} />
         </div>
