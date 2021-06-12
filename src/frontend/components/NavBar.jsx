@@ -7,18 +7,8 @@ import { css } from 'glamor';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 
-export default function NavBar(props) {
-  const settings = props.location.state.settings;
-  console.log(settings)
-
-  // style rules
-  let h1 = css({
-    color: settings.color_one,
-  });
-
-  useEffect(() => {
-    document.title = `${settings.title} | BDEC`;
-  }, []);
+export default function NavBar() {
+//   const settings = props.location.state.settings;
 
   const handleSelect = (eventKey) => {
       console.log(`selected ${eventKey}`);
@@ -58,10 +48,10 @@ export default function NavBar(props) {
   );
 }
 
-NavBar.propTypes = {
-  location: PropTypes.shape({
-    state: PropTypes.shape({
-      settings: PropTypes.object,
-    }),
-  }),
-};
+// NavBar.propTypes = {
+//   location: PropTypes.shape({
+//     state: PropTypes.shape({
+//       settings: PropTypes.object,
+//     }),
+//   }),
+// };
