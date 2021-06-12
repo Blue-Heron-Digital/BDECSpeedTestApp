@@ -84,7 +84,7 @@ export default function App() {
             />
             <Route path="/thankyou" render={props => <ThankYou {...props} />} />
             <Route path="/survey" render={props => <Survey {...props} />} />
-            <Route path="/route-test" component={FrontWithHeader} />
+            <Route path="/route-test" render={props => <FrontWithHeader {...props} />} /> 
           </LazyBoundary>
           <Redirect to="/" />
         </Switch>
