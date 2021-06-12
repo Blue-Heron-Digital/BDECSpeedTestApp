@@ -68,7 +68,7 @@ export default function NavBar() {
             eventKey="Presentation Request"
             href="https://digitalequitybaltimore.org/presentation-request/"
           >
-            FAQ
+            Presentation Request
           </NavDropdown.Item>
         </NavDropdown>
         <Nav.Item>
