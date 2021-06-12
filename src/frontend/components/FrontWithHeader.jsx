@@ -12,9 +12,9 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import Nav from 'react-bootstrap/Nav';
 
 // module imports
+import NavBar from './NavBar.jsx';
 import Loading from './Loading.jsx';
 import ChromeScreengrab from '../assets/images/chrome-location.jpg';
 import FirefoxScreengrab from '../assets/images/firefox-location.jpg';
@@ -156,24 +156,7 @@ export default function Basic() {
   } else {
     return (
       <Container fluid="lg" className={'mt-4 mb-4'}>
-        <Nav
-        activeKey="/home"
-        onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>       
-          <Nav.Item>
-            <Nav.Link href="/home">Active</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="link-1">Link1</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="link-2">Link2</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="disabled" disabled>
-              Disabled
-            </Nav.Link>
-          </Nav.Item>
-        </Nav>
+        <NavBar></NavBar>
         <div>
           <img src={logo} aria-hidden="true" {...image} />
         </div>
