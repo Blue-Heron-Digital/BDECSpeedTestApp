@@ -9,6 +9,7 @@ import 'react-form-builder2/dist/app.css';
 import Error from './Error.jsx';
 
 const Front = lazy(() => import('./Front.jsx'));
+const FrontWithHeader = lazy(() => import('./FrontWithHeader.jsx'));
 const Loading = lazy(() => import('./Loading.jsx'));
 const Login = lazy(() => import('./Login.jsx'));
 const Dashboard = lazy(() => import('./Dashboard.jsx'));
@@ -83,6 +84,7 @@ export default function App() {
             />
             <Route path="/thankyou" render={props => <ThankYou {...props} />} />
             <Route path="/survey" render={props => <Survey {...props} />} />
+            <Route path="/route-test" component={FrontWithHeader} />
           </LazyBoundary>
           <Redirect to="/" />
         </Switch>
