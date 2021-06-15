@@ -1,6 +1,5 @@
 // base imports
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
 // Bootstrap imports
 import Container from 'react-bootstrap/Container';
@@ -88,11 +87,3 @@ export default function NavBar() {
     </Container>
   );
 }
-
-// NavBar.propTypes = {
-//   location: PropTypes.shape({
-//     state: PropTypes.shape({
-//       settings: PropTypes.object,
-//     }),
-//   }),
-// };
