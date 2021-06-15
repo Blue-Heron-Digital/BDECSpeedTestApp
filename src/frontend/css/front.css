@@ -1,0 +1,48 @@
+.hero-image-container{
+    width: 1251px;
+    height: 421px;
+    left: 92px;
+    top: 127px;
+    background: url(../assets/images/3-layer-hero-img.png);
+}
+
+.hero-text{
+    /* TODO: convert to vw and vh */
+    width: 730px;
+    height: 120px;
+    left: 355px;
+    top: 172px;
+    font-family: Darker Grotesque;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.content-gradient {
+    width: 1250px;
+    height: 582px;
+    left: 92px;
+    top: 540px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), #E8E8E8;
+}
+
+.question-box {
+    width: 352px;
+    height: 62px;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.req-star{
+    color: red;
+    font-weight: 800;
+}
+
+.take-test-cta {
+    width: 348px;
+    height: 60px;
+}

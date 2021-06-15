@@ -157,79 +157,37 @@ export default function Basic() {
     return (
       <Container fluid="lg" className={'mt-4 mb-4'}>
         <NavBar />
-        <div>
-          <img src={logo} aria-hidden="true" {...image} />
+       <div class="hero-img-container">
+        <h2 class="hero-text">Help us tackle the digital divide and ensure
+<span class="bold-highlight">equal internet connectivity</span> for all of Baltimore
+by testing your internet speed</h2>
         </div>
-        <h1 {...primary}>{settings.title}</h1>
-        <div>{parse(`<div>${settings.header}</div>`)}</div>
-        <h2 {...primary}>Sharing your location</h2>
-        <p>
-          To get the most accurate location data, we ask you to allow your
-          browser to share your location. This is not essential but it is very
-          helpful for creating more accurate maps. Depending on your browser,
-          you&apos;ll see a window similar to the images below, requesting your
-          consent to share your location. If you are using Private Browsing mode
-          or Incognito mode, you may need to disable that preference for this
-          website.
-        </p>
-        <Row className={'justify-content-md-center mb-4'}>
-          <Col xs={12} md={{ span: 4 }} {...mb2}>
-            <Card {...card}>
-              <Card.Img
-                src={FirefoxScreengrab}
-                alt="Screenshot of geography location request in Firefox."
-              />
-              <Card.Text {...cardText}>
-                Screenshot of geography location request in Firefox.
-              </Card.Text>
-            </Card>
-          </Col>
-          <Col xs={12} md={{ span: 4 }} {...mb2}>
-            <Card {...card}>
-              <Card.Img
-                src={ChromeScreengrab}
-                alt="Screenshot of geography location request in Chrome."
-              />
-              <Card.Text {...cardText}>
-                Screenshot of geography location request in Chrome.
-              </Card.Text>
-            </Card>
-          </Col>
-        </Row>
         <Form onSubmit={handleSubmit}>
-          <fieldset>
-            <Form.Group>
-              <Form.Label>Do you want to use your browser location?</Form.Label>
-              <Form.Check
-                type="radio"
-                name="location"
-                id="location-yes"
-                label="Use my browser location"
-                onChange={() => setLocationConsent(true)}
-                defaultChecked
-              />
-              <Form.Check
-                type="radio"
-                name="location"
-                id="location-no"
-                label="Do not use my location"
-                onChange={() => setLocationConsent(false)}
-              />
-            </Form.Group>
-          </fieldset>
-          <Form.Group {...location}>
-            <Form.Check.Input required type="checkbox" id="consent" />
-            <Form.Check.Label>
-              *I agree to the{' '}
-              <a href="https://www.measurementlab.net/privacy/">
-                M-Lab privacy policy
-              </a>
-              , which includes retention and publication of IP addresses, in
-              addition to speed test results.
-            </Form.Check.Label>
-            <Form.Text>This field is required</Form.Text>
+          <p>Please share your browser location for the most 
+            <span class="bold">accurate location data</span><span class="req-star">*</span>
+          </p>
+          <Form.Group as={Row} controlId="formShare">
+            <Form.Check 
+            id="location-yes" 
+            name="location"
+            label="Share my browser location"
+            onChange={() => setLocationConsent(true)}
+            defaultChecked />
+          
+            <Form.Check 
+            id="location-no"
+            name="location"
+            label="Do not share my browser location"
+            onChange={() => setLocationConsent(false)} 
+            />
           </Form.Group>
-          <Button variant="primary" type="submit" {...secondary}>
+          <h2>Privacy Policy</h2>
+          <Form.Group {...location} as={Row} controlId="formAgree">
+            <Form.Check.Input required id="consent" type="checkbox" label="I agree" />
+          </Form.Group>
+          <p>*includes retention and publication of IP addresses, in addition to speed test results.</p>
+        
+          <Button className="" variant="primary" type="submit" {...secondary}>
             Take the Test
           </Button>
         </Form>

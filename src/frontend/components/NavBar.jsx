@@ -16,7 +16,7 @@ export default function NavBar() {
 
   return (
     <Container fluid="sm" className={'mt-4 mb-4'}>
-      <Nav variant="pills" onSelect={handleSelect}>
+      <Nav variant="pills" className="navbar" onSelect={handleSelect}>
         <NavDropdown title="About Us" id="nav-dropdown">
           <NavDropdown.Item
             eventKey="Our Focus"
@@ -72,14 +72,15 @@ export default function NavBar() {
           </NavDropdown.Item>
         </NavDropdown>
         <Nav.Item>
-          <Nav.Link eventKey="Donate">DONATE</Nav.Link>
+          <Nav.Link eventKey="Donate" className="button-secondary">SUPPORT US</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link
             eventKey="Main Site"
+            className="button-primary"
             href="https://digitalequitybaltimore.org/"
           >
-            MAIN SITE
+            BDEC MAIN
           </Nav.Link>
         </Nav.Item>
       </Nav>
