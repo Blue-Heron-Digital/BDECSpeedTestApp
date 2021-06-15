@@ -1,0 +1,12 @@
+.button-primary {
+    background-color: #003952;
+    color: white;
+}
+
+.button-secondary {
+    border: 1px solid #003952;
+}
+
+.navbar{
+    height: 88px;   
+}

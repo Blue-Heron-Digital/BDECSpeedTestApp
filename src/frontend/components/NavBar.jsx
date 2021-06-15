@@ -1,11 +1,9 @@
 // base imports
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { css } from 'glamor';
+import React from 'react';
 
 // Bootstrap imports
 import Container from 'react-bootstrap/Container';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Nav, NavDropdown } from 'react-bootstrap';
 
 export default function NavBar() {
   //   const settings = props.location.state.settings;
@@ -16,7 +14,7 @@ export default function NavBar() {
 
   return (
     <Container fluid="sm" className={'mt-4 mb-4'}>
-      <Nav variant="pills" onSelect={handleSelect}>
+      <Nav variant="pills" className="navbar" onSelect={handleSelect}>
         <NavDropdown title="About Us" id="nav-dropdown">
           <NavDropdown.Item
             eventKey="Our Focus"
@@ -68,29 +66,24 @@ export default function NavBar() {
             eventKey="Presentation Request"
             href="https://digitalequitybaltimore.org/presentation-request/"
           >
-            FAQ
+            Presentation Request
           </NavDropdown.Item>
         </NavDropdown>
         <Nav.Item>
-          <Nav.Link eventKey="Donate">DONATE</Nav.Link>
+          <Nav.Link eventKey="Donate" className="button-secondary">
+            SUPPORT US
+          </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link
             eventKey="Main Site"
+            className="button-primary"
             href="https://digitalequitybaltimore.org/"
           >
-            MAIN SITE
+            BDEC MAIN
           </Nav.Link>
         </Nav.Item>
       </Nav>
     </Container>
   );
 }
-
-// NavBar.propTypes = {
-//   location: PropTypes.shape({
-//     state: PropTypes.shape({
-//       settings: PropTypes.object,
-//     }),
-//   }),
-// };
