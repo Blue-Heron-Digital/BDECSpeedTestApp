@@ -78,10 +78,15 @@ export default function App() {
           <LazyBoundary fallback={Loading}>
             <Route path="/" exact component={Front} />
             <Route path="/login" render={props => <Login {...props} />} />
-            <Route path="/admin" render={props => <Dashboard {...props} role={role} />} />
+            <Route
+              path="/admin"
+              render={props => <Dashboard {...props} role={role} />}
+            />
             <Route path="/thankyou" render={props => <ThankYou {...props} />} />
             <Route path="/survey" render={props => <Survey {...props} />} />
-            <Route path="/route-test" render={props => <FrontWithHeader {...props} />}
+            <Route
+              path="/route-test"
+              render={props => <FrontWithHeader {...props} />}
             />
           </LazyBoundary>
           <Redirect to="/" />

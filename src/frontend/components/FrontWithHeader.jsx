@@ -2,13 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { css } from 'glamor';
-import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 
 // bootstrap imports
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
@@ -16,8 +13,6 @@ import Row from 'react-bootstrap/Row';
 // module imports
 import NavBar from './NavBar.jsx';
 import Loading from './Loading.jsx';
-import ChromeScreengrab from '../assets/images/chrome-location.jpg';
-import FirefoxScreengrab from '../assets/images/firefox-location.jpg';
 import defaultLogo from '../../common/assets/favicon.ico';
 
 export default function Basic() {
@@ -33,20 +28,6 @@ export default function Basic() {
   );
 
   // style rules
-
-  let card = css({
-    height: '100%',
-  });
-
-  let cardText = css({
-    fontStyle: 'italic',
-    padding: '10px',
-  });
-
-  let image = css({
-    maxHeight: '150px',
-  });
-
   let location = css({
     marginLeft: '20px',
   });
@@ -157,36 +138,51 @@ export default function Basic() {
     return (
       <Container fluid="lg" className={'mt-4 mb-4'}>
         <NavBar />
-       <div class="hero-img-container">
-        <h2 class="hero-text">Help us tackle the digital divide and ensure
-<span class="bold-highlight">equal internet connectivity</span> for all of Baltimore
-by testing your internet speed</h2>
+        <div className="hero-img-container">
+          <h2 className="hero-text">
+            Help us tackle the digital divide and ensure
+            <span className="bold-highlight">
+              equal internet connectivity
+            </span>{' '}
+            for all of Baltimore by testing your internet speed
+          </h2>
         </div>
         <Form onSubmit={handleSubmit}>
-          <p>Please share your browser location for the most 
-            <span class="bold">accurate location data</span><span class="req-star">*</span>
+          <p>
+            Please share your browser location for the most
+            <span className="bold">accurate location data</span>
+            <span className="req-star">*</span>
           </p>
           <Form.Group as={Row} controlId="formShare">
-            <Form.Check 
-            id="location-yes" 
-            name="location"
-            label="Share my browser location"
-            onChange={() => setLocationConsent(true)}
-            defaultChecked />
-          
-            <Form.Check 
-            id="location-no"
-            name="location"
-            label="Do not share my browser location"
-            onChange={() => setLocationConsent(false)} 
+            <Form.Check
+              id="location-yes"
+              name="location"
+              label="Share my browser location"
+              onChange={() => setLocationConsent(true)}
+              defaultChecked
+            />
+
+            <Form.Check
+              id="location-no"
+              name="location"
+              label="Do not share my browser location"
+              onChange={() => setLocationConsent(false)}
             />
           </Form.Group>
           <h2>Privacy Policy</h2>
           <Form.Group {...location} as={Row} controlId="formAgree">
-            <Form.Check.Input required id="consent" type="checkbox" label="I agree" />
+            <Form.Check.Input
+              required
+              id="consent"
+              type="checkbox"
+              label="I agree"
+            />
           </Form.Group>
-          <p>*includes retention and publication of IP addresses, in addition to speed test results.</p>
-        
+          <p>
+            *includes retention and publication of IP addresses, in addition to
+            speed test results.
+          </p>
+
           <Button className="" variant="primary" type="submit" {...secondary}>
             Take the Test
           </Button>

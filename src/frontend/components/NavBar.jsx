@@ -1,11 +1,10 @@
 // base imports
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'glamor';
 
 // Bootstrap imports
 import Container from 'react-bootstrap/Container';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Nav, NavDropdown } from 'react-bootstrap';
 
 export default function NavBar() {
   //   const settings = props.location.state.settings;
@@ -72,7 +71,9 @@ export default function NavBar() {
           </NavDropdown.Item>
         </NavDropdown>
         <Nav.Item>
-          <Nav.Link eventKey="Donate" className="button-secondary">SUPPORT US</Nav.Link>
+          <Nav.Link eventKey="Donate" className="button-secondary">
+            SUPPORT US
+          </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link
