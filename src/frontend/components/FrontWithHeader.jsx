@@ -4,6 +4,9 @@ import { useHistory } from 'react-router-dom';
 import { css } from 'glamor';
 import PropTypes from 'prop-types';
 
+// img imports
+import ThreeLayerHeroImage from '../assets/images/3-layer-hero-img.png';
+
 // bootstrap imports
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -37,7 +40,7 @@ export default function Basic() {
     height: '421px',
     left: '92px',
     top: '127px',
-    background: "url('../assets/images/3-layer-hero-img.png')"
+    backgroundImage: `url(${ThreeLayerHeroImage})`
   })
 
   let heroText = css({
