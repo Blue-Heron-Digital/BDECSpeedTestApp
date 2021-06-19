@@ -2,6 +2,9 @@
 import React from 'react';
 import { css, hover } from 'glamor';
 
+// img imports
+import InternetSpeedTestLogo from '../assets/images/InternetSpeedTestLogo';
+
 // Bootstrap imports
 import Container from 'react-bootstrap/Container';
 import { Nav, NavDropdown } from 'react-bootstrap';
@@ -31,9 +34,14 @@ export default function NavBar() {
       marginTop: '0 !important',
   })
 
+  let speedTestLogo = css({
+    height: '3vh'
+  })
+
   return (
     <Container fluid="sm" className={'mt-4 mb-4'}>
       <Nav variant="pills" className="navbar" {...navbar} onSelect={handleSelect}>
+        <img src={InternetSpeedTestLogo} {...speedTestLogo} />
         <NavDropdown title="About Us" id="nav-dropdown">
           <NavDropdown.Item
             eventKey="Our Focus"
