@@ -40,7 +40,7 @@ export default function Basic() {
     background: 'url(../assets/images/3-layer-hero-img.png)'
   })
 
-  let heroText = csss({
+  let heroText = css({
     /* TODO: convert to vw and vh */
     width: '730px',
     height: '120px',
