@@ -22,7 +22,7 @@ export default function Basic() {
     document.querySelector('[rel="shortcut icon"]'),
   );
   const [logo, setLogo] = useState(defaultLogo);
-  const [primary, setPrimary] = useState(css({ color: '#333' }));
+  const [primary, setPrimary] = useState(css({ color: '#333', textAlign: 'center' }));
   const [secondary, setSecondary] = useState(
     css({ backgroundColor: '#ccc !important', borderColor: '#ccc !important' }),
   );
@@ -55,8 +55,8 @@ export default function Basic() {
   })
 
   let contentGradient = css({
-    width: '1250px',
-    height: '582px',
+    width: '80vw',
+    height: '50vh',
     left: '92px',
     top: '540px',
     textAlign: 'center',
@@ -65,8 +65,11 @@ export default function Basic() {
   })
 
   let questionBox = css({
-    width: '352px',
-    height: '62px',
+    minWidth: '20vw',
+    height: '4vh',
+    textAlign: 'left',
+    margin: '0  auto',
+    backgroundColor: 'white'
   })
 
   let bold = css({
@@ -198,8 +201,7 @@ export default function Basic() {
         <div className="hero-img-container" {...heroImageContainer}>
           <h2 className="hero-text" {...heroText}>
             Help us tackle the digital divide and ensure
-             <span className="bold-highlight" {...boldHighlight}>
-            equal internet connectivity
+             <span className="bold-highlight" {...boldHighlight}> equal internet connectivity
             </span>{' '}
             for all of Baltimore by testing your internet speed
           </h2>
@@ -207,7 +209,7 @@ export default function Basic() {
         <Form onSubmit={handleSubmit} {...contentGradient}>
           <p>
             Please share your browser location for the most 
-             <span className="bold" {...bold}>accurate location data</span>
+             <span className="bold" {...bold}> accurate location data</span>
             <span className="req-star" {...reqStar}>*</span>
           </p>
           <Form.Group as={Row} controlId="formShare">
@@ -220,22 +222,26 @@ export default function Basic() {
                 defaultChecked
               />
             </div>
-            <Form.Check
-              id="location-no"
-              name="location"
-              label="Do not share my browser location"
-              onChange={() => setLocationConsent(false)}
-            />
+            <div {...questionBox}>
+              <Form.Check
+                id="location-no"
+                name="location"
+                label="Do not share my browser location"
+                onChange={() => setLocationConsent(false)}
+              />
+            </div>
           </Form.Group>
           <h2>Privacy Policy</h2>
+          
           <Form.Group {...location} as={Row} controlId="formAgree">
+          <div {...questionBox}>
             <Form.Check
-            {...questionBox}
               required
               id="consent"
               type="checkbox"
               label="I agree"
             />
+          </div>
           </Form.Group>
           <p>
             <span {...reqStar}>*</span>includes retention and publication of IP addresses, in addition to
