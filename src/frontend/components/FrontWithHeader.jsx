@@ -5,7 +5,7 @@ import { css } from 'glamor';
 import PropTypes from 'prop-types';
 
 // img imports
-import { ThreeLayerHeroImage } from '../assets/images/3-layer-hero-img.png';
+import ThreeLayerHeroImage from '../assets/images/3-layer-hero-img.png';
 
 // bootstrap imports
 import Button from 'react-bootstrap/Button';
@@ -58,8 +58,6 @@ export default function Basic() {
   let contentGradient = css({
     width: '80vw',
     height: '50vh',
-    left: '92px',
-    top: '540px',
     textAlign: 'center',
     background: 
     'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), #E8E8E8'
