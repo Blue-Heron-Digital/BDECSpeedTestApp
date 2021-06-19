@@ -5,7 +5,7 @@ import { css } from 'glamor';
 import PropTypes from 'prop-types';
 
 // img imports
-import ThreeLayerHeroImage from '../assets/images/3-layer-hero-img.png';
+import { ThreeLayerHeroImage } from '../assets/images/3-layer-hero-img.png';
 
 // bootstrap imports
 import Button from 'react-bootstrap/Button';
@@ -67,7 +67,7 @@ export default function Basic() {
 
   let questionBox = css({
     minWidth: '20vw',
-    height: '4vh',
+    padding: '1vw',
     textAlign: 'left',
     margin: '0  auto',
     backgroundColor: 'white'
@@ -91,6 +91,10 @@ export default function Basic() {
     width: '348px',
     height: '60px',
     backgroundColor: '#68BB59'
+  })
+
+  let navBarCustomStyle = css({
+    marginTop: 0
   })
 
   let mb2 = css({
@@ -198,7 +202,7 @@ export default function Basic() {
   } else {
     return (
       <Container fluid="lg" className={'mt-4 mb-4'}>
-        <NavBar />
+        <NavBar {...navBarCustomStyle}/>
         <div className="hero-img-container" {...heroImageContainer}>
           <h2 className="hero-text" {...heroText}>
             Help us tackle the digital divide and ensure
