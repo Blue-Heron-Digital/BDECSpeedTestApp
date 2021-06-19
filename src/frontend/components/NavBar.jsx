@@ -12,9 +12,23 @@ export default function NavBar() {
     console.log(`selected ${eventKey}`);
   };
 
+  // style rules
+  let buttonPrimary = css({
+    backgroundColor: '#003952',
+    color: 'white'
+  })
+
+  let buttonSecondary =  css({
+    border: '1px solid #003952'
+  })
+
+  let navbar = css({
+      height: '88px' 
+  })
+
   return (
     <Container fluid="sm" className={'mt-4 mb-4'}>
-      <Nav variant="pills" className="navbar" onSelect={handleSelect}>
+      <Nav variant="pills" className="navbar" {...navbar} onSelect={handleSelect}>
         <NavDropdown title="About Us" id="nav-dropdown">
           <NavDropdown.Item
             eventKey="Our Focus"
@@ -70,12 +84,16 @@ export default function NavBar() {
           </NavDropdown.Item>
         </NavDropdown>
         <Nav.Item>
-          <Nav.Link eventKey="Donate" className="button-secondary">
+          <Nav.Link 
+          eventKey="Donate" 
+          className="button-secondary"
+          {...buttonSecondary}>
             SUPPORT US
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link
+            {...buttonPrimary}
             eventKey="Main Site"
             className="button-primary"
             href="https://digitalequitybaltimore.org/"
