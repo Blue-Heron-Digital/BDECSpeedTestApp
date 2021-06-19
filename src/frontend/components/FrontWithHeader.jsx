@@ -36,10 +36,8 @@ export default function Basic() {
   });
 
   let heroImageContainer = css({
-    width: '1251px',
-    height: '421px',
-    left: '92px',
-    top: '127px',
+    width: '90vw',
+    height: '25vh',
     backgroundImage: `url(${ThreeLayerHeroImage})`
   })
 
