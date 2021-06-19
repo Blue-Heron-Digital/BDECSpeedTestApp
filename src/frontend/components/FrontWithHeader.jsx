@@ -32,6 +32,61 @@ export default function Basic() {
     marginLeft: '20px',
   });
 
+  let heroImageContainer = css({
+    width: '1251px',
+    height: '421px',
+    left: '92px',
+    top: '127px',
+    background: 'url(../assets/images/3-layer-hero-img.png)'
+  })
+
+  let heroText = csss({
+    /* TODO: convert to vw and vh */
+    width: '730px',
+    height: '120px',
+    left: '355px',
+    top: '172px',
+    fontFamily: 'Darker Grotesque',
+    fontStyle: 'normal',
+    fontWeight: 600,
+    fontSize: '36px',
+    lineHeight: '40px',
+    textAlign: 'center'
+  })
+
+  let contentGradient = css({
+    width: '1250px',
+    height: '582px',
+    left: '92px',
+    top: '540px',
+    background: 
+    'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), #E8E8E8'
+  })
+
+  let questionBox = css({
+    width: '352px',
+    height: '62px',
+  })
+
+  let bold = css({
+    fontWeight: 800
+  })
+
+  let boldHighlight = css({
+    fontWeight: 800,
+    backgroundColor: '#333'
+  })
+
+  let reqStar = css({
+    color: 'red',
+    fontWeight: 800
+  })
+
+  let takeTestCTA = css({
+    width: '348px',
+    height: '60px',
+  })
+
   let mb2 = css({
     '@media(max-width: 768px)': {
       marginBottom: '20px',
@@ -138,23 +193,24 @@ export default function Basic() {
     return (
       <Container fluid="lg" className={'mt-4 mb-4'}>
         <NavBar />
-        <div className="hero-img-container">
-          <h2 className="hero-text">
+        <div className="hero-img-container" {...heroImageContainer}>
+          <h2 className="hero-text" {...heroText}>
             Help us tackle the digital divide and ensure
-            <span className="bold-highlight">
-              equal internet connectivity
+             <span className="bold-highlight" {...boldHighlight}>
+            equal internet connectivity
             </span>{' '}
             for all of Baltimore by testing your internet speed
           </h2>
         </div>
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} {...contentGradient}>
           <p>
-            Please share your browser location for the most
-            <span className="bold">accurate location data</span>
-            <span className="req-star">*</span>
+            Please share your browser location for the most 
+            <span className="bold" {...bold}>accurate location data</span>
+            <span className="req-star" {...reqStar}>*</span>
           </p>
           <Form.Group as={Row} controlId="formShare">
             <Form.Check
+            {...questionBox}
               id="location-yes"
               name="location"
               label="Share my browser location"
@@ -163,6 +219,7 @@ export default function Basic() {
             />
 
             <Form.Check
+            {...questionBox}
               id="location-no"
               name="location"
               label="Do not share my browser location"
@@ -172,6 +229,7 @@ export default function Basic() {
           <h2>Privacy Policy</h2>
           <Form.Group {...location} as={Row} controlId="formAgree">
             <Form.Check.Input
+            {...questionBox}
               required
               id="consent"
               type="checkbox"
@@ -183,7 +241,8 @@ export default function Basic() {
             speed test results.
           </p>
 
-          <Button className="" variant="primary" type="submit" {...secondary}>
+          <Button className="" variant="primary" type="submit" 
+          {...secondary} {...takeTestCTA}>
             Take the Test
           </Button>
         </Form>
