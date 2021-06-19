@@ -1,6 +1,6 @@
 // base imports
 import React from 'react';
-import { css } from 'glamor';
+import { css, hover } from 'glamor';
 
 // Bootstrap imports
 import Container from 'react-bootstrap/Container';
@@ -16,7 +16,10 @@ export default function NavBar() {
   // style rules
   let buttonPrimary = css({
     backgroundColor: '#003952',
-    color: 'white'
+    color: 'white',
+    ':hover': {
+      color: 'white' 
+    } 
   })
 
   let buttonSecondary =  css({
@@ -24,7 +27,8 @@ export default function NavBar() {
   })
 
   let navbar = css({
-      height: '88px' 
+      height: '88px',
+      marginTop: '0 !important',
   })
 
   return (
