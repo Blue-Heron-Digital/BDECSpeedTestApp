@@ -37,7 +37,7 @@ export default function Basic() {
     height: '421px',
     left: '92px',
     top: '127px',
-    background: 'url(../assets/images/3-layer-hero-img.png)'
+    background: "url('../assets/images/3-layer-hero-img.png')"
   })
 
   let heroText = css({
@@ -59,6 +59,7 @@ export default function Basic() {
     height: '582px',
     left: '92px',
     top: '540px',
+    textAlign: 'center',
     background: 
     'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), #E8E8E8'
   })
@@ -74,7 +75,7 @@ export default function Basic() {
 
   let boldHighlight = css({
     fontWeight: 800,
-    backgroundColor: '#333'
+    backgroundColor: 'RGBA(104, 187, 89, .4)'
   })
 
   let reqStar = css({
@@ -85,6 +86,7 @@ export default function Basic() {
   let takeTestCTA = css({
     width: '348px',
     height: '60px',
+    backgroundColor: '#68BB59'
   })
 
   let mb2 = css({
@@ -205,21 +207,20 @@ export default function Basic() {
         <Form onSubmit={handleSubmit} {...contentGradient}>
           <p>
             Please share your browser location for the most 
-            <span className="bold" {...bold}>accurate location data</span>
+             <span className="bold" {...bold}>accurate location data</span>
             <span className="req-star" {...reqStar}>*</span>
           </p>
           <Form.Group as={Row} controlId="formShare">
+            <div {...questionBox}>
+              <Form.Check
+                id="location-yes"
+                name="location"
+                label="Share my browser location"
+                onChange={() => setLocationConsent(true)}
+                defaultChecked
+              />
+            </div>
             <Form.Check
-            {...questionBox}
-              id="location-yes"
-              name="location"
-              label="Share my browser location"
-              onChange={() => setLocationConsent(true)}
-              defaultChecked
-            />
-
-            <Form.Check
-            {...questionBox}
               id="location-no"
               name="location"
               label="Do not share my browser location"
@@ -228,7 +229,7 @@ export default function Basic() {
           </Form.Group>
           <h2>Privacy Policy</h2>
           <Form.Group {...location} as={Row} controlId="formAgree">
-            <Form.Check.Input
+            <Form.Check
             {...questionBox}
               required
               id="consent"
@@ -237,7 +238,7 @@ export default function Basic() {
             />
           </Form.Group>
           <p>
-            *includes retention and publication of IP addresses, in addition to
+            <span {...reqStar}>*</span>includes retention and publication of IP addresses, in addition to
             speed test results.
           </p>
 
