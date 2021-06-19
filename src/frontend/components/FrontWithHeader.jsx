@@ -5,7 +5,7 @@ import { css } from 'glamor';
 import PropTypes from 'prop-types';
 
 // img imports
-import { ThreeLayerHeroImage } from '../assets/images/3-layer-hero-img.png';
+import ThreeLayerHeroImage from '../assets/images/3-layer-hero-img.png';
 
 // bootstrap imports
 import Button from 'react-bootstrap/Button';

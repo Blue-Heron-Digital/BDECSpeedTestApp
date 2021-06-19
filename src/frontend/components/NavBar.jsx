@@ -3,7 +3,7 @@ import React from 'react';
 import { css, hover } from 'glamor';
 
 // img imports
-import { InternetSpeedTestLogo } from '../assets/images/InternetSpeedTestLogo';
+import InternetSpeedTestLogo from '../assets/images/InternetSpeedTestLogo';
 
 // Bootstrap imports
 import Container from 'react-bootstrap/Container';
