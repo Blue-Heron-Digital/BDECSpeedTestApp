@@ -1,5 +1,5 @@
 @import './mapbox.css';
-
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque');
 .mb-2 {
   margin-bottom: 20px !important;
 }
