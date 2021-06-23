@@ -36,7 +36,7 @@ export default function NavBar() {
   let speedTestLogo = css({
     height: '3vh',
   });
-  
+
   //<img src={InternetSpeedTestLogo} {...speedTestLogo} />
   return (
     <Container fluid="sm" className={'mt-4 mb-4'}>
