@@ -21,27 +21,31 @@ export default function NavBar() {
     backgroundColor: '#003952',
     color: 'white',
     ':hover': {
-      color: 'white' 
-    } 
-  })
+      color: 'white',
+    },
+  });
 
-  let buttonSecondary =  css({
-    border: '1px solid #003952'
-  })
+  let buttonSecondary = css({
+    border: '1px solid #003952',
+  });
 
   let navbar = css({
-      height: '88px',
-      
-  })
+    height: '88px',
+  });
 
   let speedTestLogo = css({
-    height: '3vh'
-  })
-//<img src={InternetSpeedTestLogo} {...speedTestLogo} />
+    height: '3vh',
+  });
+  
+  //<img src={InternetSpeedTestLogo} {...speedTestLogo} />
   return (
     <Container fluid="sm" className={'mt-4 mb-4'}>
-      <Nav variant="pills" className="navbar" {...navbar} onSelect={handleSelect}>
-        
+      <Nav
+        variant="pills"
+        className="navbar"
+        {...navbar}
+        onSelect={handleSelect}
+      >
         <NavDropdown title="About Us" id="nav-dropdown">
           <NavDropdown.Item
             eventKey="Our Focus"
@@ -97,10 +101,11 @@ export default function NavBar() {
           </NavDropdown.Item>
         </NavDropdown>
         <Nav.Item>
-          <Nav.Link 
-          eventKey="Donate" 
-          className="button-secondary"
-          {...buttonSecondary}>
+          <Nav.Link
+            eventKey="Donate"
+            className="button-secondary"
+            {...buttonSecondary}
+          >
             SUPPORT US
           </Nav.Link>
         </Nav.Item>

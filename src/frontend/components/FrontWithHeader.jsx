@@ -25,7 +25,9 @@ export default function Basic() {
     document.querySelector('[rel="shortcut icon"]'),
   );
   const [logo, setLogo] = useState(defaultLogo);
-  const [primary, setPrimary] = useState(css({ color: '#333', textAlign: 'center' }));
+  const [primary, setPrimary] = useState(
+    css({ color: '#333', textAlign: 'center' }),
+  );
   const [secondary, setSecondary] = useState(
     css({ backgroundColor: '#ccc !important', borderColor: '#ccc !important' }),
   );
@@ -38,9 +40,8 @@ export default function Basic() {
   let heroImageContainer = css({
     width: '90vw',
     height: '25vh',
-    
-  })
-//backgroundImage: `url(${ThreeLayerHeroImage})`
+  });
+  //backgroundImage: `url(${ThreeLayerHeroImage})`
 
   let heroText = css({
     /* TODO: convert to vw and vh */
@@ -53,48 +54,48 @@ export default function Basic() {
     fontWeight: 600,
     fontSize: '36px',
     lineHeight: '40px',
-    textAlign: 'center'
-  })
+    textAlign: 'center',
+  });
 
   let contentGradient = css({
     width: '80vw',
     height: '50vh',
     textAlign: 'center',
-    background: 
-    'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), #E8E8E8'
-  })
+    background:
+      'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), #E8E8E8',
+  });
 
   let questionBox = css({
     minWidth: '20vw',
     padding: '1vw',
     textAlign: 'left',
     margin: '0  auto',
-    backgroundColor: 'white'
-  })
+    backgroundColor: 'white',
+  });
 
   let bold = css({
-    fontWeight: 800
-  })
+    fontWeight: 800,
+  });
 
   let boldHighlight = css({
     fontWeight: 800,
-    backgroundColor: 'RGBA(104, 187, 89, .4)'
-  })
+    backgroundColor: 'RGBA(104, 187, 89, .4)',
+  });
 
   let reqStar = css({
     color: 'red',
-    fontWeight: 800
-  })
+    fontWeight: 800,
+  });
 
   let takeTestCTA = css({
     width: '348px',
     height: '60px',
-    backgroundColor: '#68BB59'
-  })
+    backgroundColor: '#68BB59',
+  });
 
   let navBarCustomStyle = css({
-    marginTop: 0
-  })
+    marginTop: 0,
+  });
 
   let mb2 = css({
     '@media(max-width: 768px)': {
@@ -201,20 +202,27 @@ export default function Basic() {
   } else {
     return (
       <Container fluid="lg" className={'mt-4 mb-4'}>
-        <NavBar {...navBarCustomStyle}/>
+        <NavBar {...navBarCustomStyle} />
         <div className="hero-img-container" {...heroImageContainer}>
           <h2 className="hero-text" {...heroText}>
             Help us tackle the digital divide and ensure
-             <span className="bold-highlight" {...boldHighlight}> equal internet connectivity
+            <span className="bold-highlight" {...boldHighlight}>
+              {' '}
+              equal internet connectivity
             </span>{' '}
             for all of Baltimore by testing your internet speed
           </h2>
         </div>
         <Form onSubmit={handleSubmit} {...contentGradient}>
           <p>
-            Please share your browser location for the most 
-             <span className="bold" {...bold}> accurate location data</span>
-            <span className="req-star" {...reqStar}>*</span>
+            Please share your browser location for the most
+            <span className="bold" {...bold}>
+              {' '}
+              accurate location data
+            </span>
+            <span className="req-star" {...reqStar}>
+              *
+            </span>
           </p>
           <Form.Group as={Row} controlId="formShare">
             <div {...questionBox}>
@@ -236,24 +244,29 @@ export default function Basic() {
             </div>
           </Form.Group>
           <h2>Privacy Policy</h2>
-          
+
           <Form.Group {...location} as={Row} controlId="formAgree">
-          <div {...questionBox}>
-            <Form.Check
-              required
-              id="consent"
-              type="checkbox"
-              label="I agree"
-            />
-          </div>
+            <div {...questionBox}>
+              <Form.Check
+                required
+                id="consent"
+                type="checkbox"
+                label="I agree"
+              />
+            </div>
           </Form.Group>
           <p>
-            <span {...reqStar}>*</span>includes retention and publication of IP addresses, in addition to
-            speed test results.
+            <span {...reqStar}>*</span>includes retention and publication of IP
+            addresses, in addition to speed test results.
           </p>
 
-          <Button className="" variant="primary" type="submit" 
-          {...secondary} {...takeTestCTA}>
+          <Button
+            className=""
+            variant="primary"
+            type="submit"
+            {...secondary}
+            {...takeTestCTA}
+          >
             Take the Test
           </Button>
         </Form>
