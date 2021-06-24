@@ -30,7 +30,10 @@ export default function NavBar() {
   });
 
   let navbarA = css({
-    color: '#003952',
+    color: '#003952 !important',
+    ':hover': {
+      color: '#003952',
+    },
   });
 
   let navbar = css({
@@ -43,7 +46,7 @@ export default function NavBar() {
 
   //<img src={InternetSpeedTestLogo} {...speedTestLogo} />
   return (
-    <Container fluid="sm" className={'mt-4 mb-4'}>
+    <Container fluid="sm">
       <Nav
         variant="pills"
         className="navbar"
