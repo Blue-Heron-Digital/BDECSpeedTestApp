@@ -57,6 +57,13 @@ export default function Basic() {
     textAlign: 'center',
   });
 
+  let bodyWrapper = css({
+    display: 'flex',
+    flexFlow: 'column-nowrap',
+    alignItems: 'center',
+    justifyContent: 'center',
+  });
+
   let contentGradient = css({
     width: '80vw',
     height: '50vh',
@@ -201,7 +208,7 @@ export default function Basic() {
     return <Loading />;
   } else {
     return (
-      <Container fluid="lg" className={'mt-4 mb-4'}>
+      <Container fluid="lg" {...bodyWrapper}>
         <NavBar {...navBarCustomStyle} />
         <div className="hero-img-container" {...heroImageContainer}>
           <h2 className="hero-text" {...heroText}>

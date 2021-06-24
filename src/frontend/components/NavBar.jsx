@@ -29,6 +29,10 @@ export default function NavBar() {
     border: '1px solid #003952',
   });
 
+  let navbarA = css({
+    color: '#003952',
+  });
+
   let navbar = css({
     height: '88px',
   });
@@ -36,7 +40,7 @@ export default function NavBar() {
   let speedTestLogo = css({
     height: '3vh',
   });
-  
+
   //<img src={InternetSpeedTestLogo} {...speedTestLogo} />
   return (
     <Container fluid="sm" className={'mt-4 mb-4'}>
@@ -46,7 +50,7 @@ export default function NavBar() {
         {...navbar}
         onSelect={handleSelect}
       >
-        <NavDropdown title="About Us" id="nav-dropdown">
+        <NavDropdown {...navbarA} title="About Us" id="nav-dropdown">
           <NavDropdown.Item
             eventKey="Our Focus"
             href="https://digitalequitybaltimore.org/our-focus/"
@@ -68,13 +72,14 @@ export default function NavBar() {
         </NavDropdown>
         <Nav.Item>
           <Nav.Link
+            {...navbarA}
             eventKey="1"
             href="https://digitalequitybaltimore.org/hotline/"
           >
             Adult Learner Hotline
           </Nav.Link>
         </Nav.Item>
-        <NavDropdown title="FREE Internet" id="nav-dropdown">
+        <NavDropdown title="FREE Internet" id="nav-dropdown" {...navbarA}>
           <NavDropdown.Item
             eventKey="Sign Up"
             href="https://digitalequitybaltimore.org/freeinternet/"
@@ -102,6 +107,7 @@ export default function NavBar() {
         </NavDropdown>
         <Nav.Item>
           <Nav.Link
+            {...navbarA}
             eventKey="Donate"
             className="button-secondary"
             {...buttonSecondary}
