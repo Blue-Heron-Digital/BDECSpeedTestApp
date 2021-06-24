@@ -40,6 +40,9 @@ export default function Basic() {
   let heroImageContainer = css({
     width: '90vw',
     height: '25vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   });
   //backgroundImage: `url(${ThreeLayerHeroImage})`
 
@@ -97,8 +100,8 @@ export default function Basic() {
   let takeTestCTA = css({
     width: '348px',
     height: '60px',
-    backgroundColor: '#68BB59',
-  });
+    backgroundColor: '#00A9F4',
+  }); // do we want 40% opacity or not on this bg color?
 
   let navBarCustomStyle = css({
     marginTop: 0,
