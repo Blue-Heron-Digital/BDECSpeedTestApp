@@ -62,7 +62,7 @@ export default function Basic() {
     flexFlow: 'column-nowrap',
     alignItems: 'center',
     justifyContent: 'center',
-  })
+  });
 
   let contentGradient = css({
     width: '80vw',

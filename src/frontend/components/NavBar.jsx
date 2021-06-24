@@ -29,9 +29,9 @@ export default function NavBar() {
     border: '1px solid #003952',
   });
 
-  let navbarA= css({
-    color: '#003952'
-  })
+  let navbarA = css({
+    color: '#003952',
+  });
 
   let navbar = css({
     height: '88px',
@@ -51,7 +51,7 @@ export default function NavBar() {
         onSelect={handleSelect}
       >
         <NavDropdown {...navbarA} title="About Us" id="nav-dropdown">
-          <NavDropdown.Item            
+          <NavDropdown.Item
             eventKey="Our Focus"
             href="https://digitalequitybaltimore.org/our-focus/"
           >
@@ -71,7 +71,7 @@ export default function NavBar() {
           </NavDropdown.Item>
         </NavDropdown>
         <Nav.Item>
-          <Nav.Link 
+          <Nav.Link
             {...navbarA}
             eventKey="1"
             href="https://digitalequitybaltimore.org/hotline/"
@@ -106,12 +106,11 @@ export default function NavBar() {
           </NavDropdown.Item>
         </NavDropdown>
         <Nav.Item>
-          <Nav.Link 
+          <Nav.Link
             {...navbarA}
             eventKey="Donate"
             className="button-secondary"
             {...buttonSecondary}
-            {...navbarA}
           >
             SUPPORT US
           </Nav.Link>
