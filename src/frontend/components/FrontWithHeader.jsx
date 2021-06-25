@@ -91,7 +91,7 @@ export default function Basic() {
 
   let boldHighlight = css({
     fontWeight: 800,
-    backgroundColor: rgba(0, 169, 244, 0.4),
+    backgroundColor: 'rgba(0, 169, 244, 0.4)',
   }); // we had green but don't want it anymore?
   // backgroundColor: 'RGBA(104, 187, 89, .4)',
 
