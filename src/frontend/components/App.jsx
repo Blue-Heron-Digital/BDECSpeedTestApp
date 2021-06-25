@@ -15,6 +15,7 @@ const Login = lazy(() => import('./Login.jsx'));
 const Dashboard = lazy(() => import('./Dashboard.jsx'));
 const ThankYou = lazy(() => import('./ThankYou.jsx'));
 const Survey = lazy(() => import('./Survey.jsx'));
+const SurveyWithHeader = lazy(() => import('./SurveyWithHeader.jsx'));
 
 export default function App() {
   const [role, setRole] = React.useState(null);
@@ -87,6 +88,10 @@ export default function App() {
             <Route
               path="/route-test"
               render={props => <FrontWithHeader {...props} />}
+            />
+            <Route
+              path="/survey-with-header"
+              render={props => <SurveyWithHeader {...props} />}
             />
           </LazyBoundary>
           <Redirect to="/" />
