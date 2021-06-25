@@ -42,7 +42,7 @@ export default function Basic() {
     height: '25vh',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   });
   //backgroundImage: `url(${ThreeLayerHeroImage})`
 
@@ -62,7 +62,7 @@ export default function Basic() {
 
   let bodyWrapper = css({
     display: 'flex',
-    flexFlow: 'column-nowrap',
+    flexFlow: 'column nowrap',
     alignItems: 'center',
     justifyContent: 'center',
   });
@@ -100,7 +100,7 @@ export default function Basic() {
   let takeTestCTA = css({
     width: '348px',
     height: '60px',
-    backgroundColor: '#00A9F4',
+    backgroundColor: 'rgba(0, 169, 244, 0.4);'
   }); // do we want 40% opacity or not on this bg color?
 
   let navBarCustomStyle = css({
@@ -274,7 +274,6 @@ export default function Basic() {
             className=""
             variant="primary"
             type="submit"
-            {...secondary}
             {...takeTestCTA}
           >
             Take the Test

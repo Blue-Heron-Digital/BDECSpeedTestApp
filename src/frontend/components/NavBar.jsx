@@ -2,6 +2,9 @@
 import React from 'react';
 import { css, hover } from 'glamor';
 
+// css imports
+import '../css/navbar.css';
+
 // img imports
 // import InternetSpeedTestLogo from '../assets/images/InternetSpeedTestLogo';
 
@@ -51,6 +54,7 @@ export default function NavBar() {
         variant="pills"
         className="navbar"
         {...navbar}
+        {...navBarA}
         onSelect={handleSelect}
       >
         <NavDropdown {...navbarA} title="About Us" id="nav-dropdown">
