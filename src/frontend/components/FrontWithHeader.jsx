@@ -5,7 +5,7 @@ import { css } from 'glamor';
 import PropTypes from 'prop-types';
 
 // img imports
-//import ThreeLayerHeroImage from '../assets/images/3-layer-hero-img.png';
+import ThreeLayerHeroImage from '../assets/images/3-layer-hero-img.png';
 
 // bootstrap imports
 import Button from 'react-bootstrap/Button';
@@ -43,8 +43,9 @@ export default function Basic() {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundImage: `url(${ThreeLayerHeroImage})`
   });
-  //backgroundImage: `url(${ThreeLayerHeroImage})`
+  
 
   let heroText = css({
     /* TODO: convert to vw and vh */
@@ -89,8 +90,9 @@ export default function Basic() {
 
   let boldHighlight = css({
     fontWeight: 800,
-    backgroundColor: 'RGBA(104, 187, 89, .4)',
-  });
+    backgroundColor: '#00A9F4',
+  }); // we had green but don't want it anymore? 
+  // backgroundColor: 'RGBA(104, 187, 89, .4)',
 
   let reqStar = css({
     color: 'red',
@@ -99,7 +101,7 @@ export default function Basic() {
 
   let stuckTogether = css({
     margin: '1vh 17vw',
-  })
+  });
 
   let takeTestCTA = css({
     width: '348px',
@@ -230,6 +232,7 @@ export default function Basic() {
             </span>{' '}
             for all of Baltimore by testing your internet speed
           </h2>
+          <img src={ThreeLayerHeroImage} width="90vw" />
         </div>
         <Form onSubmit={handleSubmit} {...contentGradient}>
           <p>
@@ -274,8 +277,8 @@ export default function Basic() {
             </div>
           </Form.Group>
           <p {...specialNotice}>
-            *includes retention and publication of IP
-            addresses, in addition to speed test results.
+            *includes retention and publication of IP addresses, in addition to
+            speed test results.
           </p>
 
           <Button className="" variant="primary" type="submit" {...takeTestCTA}>
