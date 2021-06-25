@@ -38,15 +38,15 @@ export default function Basic() {
   });
 
   let heroImageContainer = css({
-    width: '90vw',
+    width: '86vw',
     height: '43vh',
     display: 'flex',
-    marginTop: '2vh',
+    paddingTop: '2vh',
     justifyContent: 'center',
     background:
       'linear-gradient(180deg, rgba(255, 255, 255, 1) 100%, #FFFFFF 0%), #E8E8E8',
     backgroundImage: `url(${ThreeLayerHeroImage})`,
-  });
+  }); //this gradient isn't working as planned, it's showing as all grey but is supposed to be white at the top fading to grey at the bottom
 
   let heroText = css({
     /* TODO: convert to vw and vh */
@@ -70,7 +70,7 @@ export default function Basic() {
   });
 
   let contentGradient = css({
-    width: '80vw',
+    width: '86vw',
     height: '50vh',
     textAlign: 'center',
     background:
