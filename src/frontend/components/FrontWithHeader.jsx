@@ -5,7 +5,7 @@ import { css } from 'glamor';
 import PropTypes from 'prop-types';
 
 // img imports
-//import ThreeLayerHeroImage from '../assets/images/3-layer-hero-img.png';
+import ThreeLayerHeroImage from '../assets/images/3-layer-hero-img.png';
 
 // bootstrap imports
 import Button from 'react-bootstrap/Button';
@@ -43,8 +43,8 @@ export default function Basic() {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundImage: `url(${ThreeLayerHeroImage})`,
   });
-  //backgroundImage: `url(${ThreeLayerHeroImage})`
 
   let heroText = css({
     /* TODO: convert to vw and vh */
@@ -89,8 +89,9 @@ export default function Basic() {
 
   let boldHighlight = css({
     fontWeight: 800,
-    backgroundColor: 'RGBA(104, 187, 89, .4)',
-  });
+    backgroundColor: '#00A9F4',
+  }); // we had green but don't want it anymore?
+  // backgroundColor: 'RGBA(104, 187, 89, .4)',
 
   let reqStar = css({
     color: 'red',
@@ -99,13 +100,17 @@ export default function Basic() {
 
   let stuckTogether = css({
     margin: '1vh 17vw',
-  })
+  });
+
+  let gradientParagraph = css({
+    marginTop: '4vh',
+  });
 
   let takeTestCTA = css({
     width: '348px',
     height: '60px',
-    backgroundColor: 'rgba(0, 169, 244, 0.4);',
   }); // do we want 40% opacity or not on this bg color?
+  // backgroundColor: 'rgba(0, 169, 244, 0.4);', doesn't really look good
 
   let navBarCustomStyle = css({
     marginTop: 0,
@@ -113,6 +118,13 @@ export default function Basic() {
 
   let specialNotice = css({
     width: '24vw',
+    margin: '0 auto',
+    marginBottom: '4vh',
+  });
+
+  let privacyPolicy = css({
+    fontSize: '1.6rem',
+    marginTop: '4vh',
   });
 
   let mb2 = css({
@@ -230,9 +242,10 @@ export default function Basic() {
             </span>{' '}
             for all of Baltimore by testing your internet speed
           </h2>
+          <img src={ThreeLayerHeroImage} width="90vw" />
         </div>
         <Form onSubmit={handleSubmit} {...contentGradient}>
-          <p>
+          <p {...gradientParagraph}>
             Please share your browser location for the most
             <span className="bold" {...bold}>
               {' '}
@@ -261,7 +274,7 @@ export default function Basic() {
               />
             </div>
           </Form.Group>
-          <h2>Privacy Policy</h2>
+          <h2 {...privacyPolicy}>Privacy Policy</h2>
 
           <Form.Group {...location} as={Row} controlId="formAgree">
             <div {...questionBox}>
@@ -274,8 +287,8 @@ export default function Basic() {
             </div>
           </Form.Group>
           <p {...specialNotice}>
-            *includes retention and publication of IP
-            addresses, in addition to speed test results.
+            *includes retention and publication of IP addresses, in addition to
+            speed test results.
           </p>
 
           <Button className="" variant="primary" type="submit" {...takeTestCTA}>
