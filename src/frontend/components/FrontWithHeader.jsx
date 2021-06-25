@@ -97,6 +97,10 @@ export default function Basic() {
     fontWeight: 800,
   });
 
+  let stuckTogether = css({
+    margin: '1vh 17vw',
+  })
+
   let takeTestCTA = css({
     width: '348px',
     height: '60px',
@@ -105,6 +109,10 @@ export default function Basic() {
 
   let navBarCustomStyle = css({
     marginTop: 0,
+  });
+
+  let specialNotice = css({
+    width: '24vw',
   });
 
   let mb2 = css({
@@ -234,7 +242,7 @@ export default function Basic() {
               *
             </span>
           </p>
-          <Form.Group as={Row} controlId="formShare">
+          <Form.Group as={Row} {...stuckTogether} controlId="formShare">
             <div {...questionBox}>
               <Form.Check
                 id="location-yes"
@@ -261,12 +269,12 @@ export default function Basic() {
                 required
                 id="consent"
                 type="checkbox"
-                label="I agree"
+                label="I agree*"
               />
             </div>
           </Form.Group>
-          <p>
-            <span {...reqStar}>*</span>includes retention and publication of IP
+          <p {...specialNotice}>
+            *includes retention and publication of IP
             addresses, in addition to speed test results.
           </p>
 
