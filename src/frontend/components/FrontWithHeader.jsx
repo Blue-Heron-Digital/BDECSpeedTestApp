@@ -103,8 +103,8 @@ export default function Basic() {
   });
 
   let gradientParagraph = css({
-    marginTop: '4vh'
-  })
+    marginTop: '4vh',
+  });
 
   let takeTestCTA = css({
     width: '348px',
@@ -119,13 +119,13 @@ export default function Basic() {
   let specialNotice = css({
     width: '24vw',
     margin: '0 auto',
-    marginBottom: '4vh'
+    marginBottom: '4vh',
   });
 
   let privacyPolicy = css({
     fontSize: '1.6rem',
     marginTop: '4vh',
-  })
+  });
 
   let mb2 = css({
     '@media(max-width: 768px)': {
