@@ -37,7 +37,9 @@ export default function NavBar() {
     ':hover': {
       color: '#003952',
     },
-  });
+    backgroundColor: '#FFF'
+  }); // this bg color helps with issues of no navigability on mobile 
+  // when the links have transparent backgrounds on hamburger expansion
 
   let navbar = css({
     height: '88px',
@@ -50,7 +52,6 @@ export default function NavBar() {
   return (
     <Container fluid="sm">
       <Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav
