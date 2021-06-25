@@ -37,8 +37,8 @@ export default function NavBar() {
     ':hover': {
       color: '#003952',
     },
-    backgroundColor: '#FFF'
-  }); // this bg color helps with issues of no navigability on mobile 
+    backgroundColor: '#FFF',
+  }); // this bg color helps with issues of no navigability on mobile
   // when the links have transparent backgrounds on hamburger expansion
 
   let navbar = css({

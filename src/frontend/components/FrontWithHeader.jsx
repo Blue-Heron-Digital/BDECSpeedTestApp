@@ -38,7 +38,7 @@ export default function Basic() {
   });
 
   let heroImageContainer = css({
-    width: '90vw',
+    width: '86vw',
     height: '43vh',
     display: 'flex',
     marginTop: '2vh',
@@ -70,7 +70,7 @@ export default function Basic() {
   });
 
   let contentGradient = css({
-    width: '80vw',
+    width: '86vw',
     height: '50vh',
     textAlign: 'center',
     background:
