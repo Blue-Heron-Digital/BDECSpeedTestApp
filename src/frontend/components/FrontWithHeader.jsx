@@ -225,10 +225,10 @@ export default function Basic() {
   const handleSubmit = event => {
     event.preventDefault();
     history.push({
-      pathname: '/survey-with-header',
+      pathname: '/survey',
       state: { settings: settings, locationConsent: locationConsent },
     });
-  };
+  }; // I had tried pathname: '/survey-with-header', but got the issues described in App.jsx on routes
 
   if (!settings) {
     return <Loading />;

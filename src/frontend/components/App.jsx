@@ -89,10 +89,6 @@ export default function App() {
               path="/route-test"
               render={props => <FrontWithHeader {...props} />}
             />
-            <Route
-              path="/survey-with-header"
-              render={props => <SurveyWithHeader {...props} />}
-            />
           </LazyBoundary>
           <Redirect to="/" />
         </Switch>
@@ -100,3 +96,14 @@ export default function App() {
     );
   }
 }
+
+/*
+ <Route
+path="/survey-with-header"
+render={props => <SurveyWithHeader {...props} />}
+/>
+
+I had tried to imlement this on line 91/92 but kept getting 
+".getControllerId is not a function in ForwardRef, NavLink, DropdownToggle", etc
+so I pulled this back out of App.jsx
+*/
