@@ -39,10 +39,12 @@ export default function Basic() {
 
   let heroImageContainer = css({
     width: '90vw',
-    height: '25vh',
+    height: '43vh',
     display: 'flex',
-    alignItems: 'center',
+    marginTop: '2vh',
     justifyContent: 'center',
+    background:
+      'linear-gradient(180deg, rgba(255, 255, 255, 1) 100%, #FFFFFF 0%), #E8E8E8',
     backgroundImage: `url(${ThreeLayerHeroImage})`,
   });
 
@@ -89,7 +91,7 @@ export default function Basic() {
 
   let boldHighlight = css({
     fontWeight: 800,
-    backgroundColor: '#00A9F4',
+    backgroundColor: rgb(0, 169, 244, .4),
   }); // we had green but don't want it anymore?
   // backgroundColor: 'RGBA(104, 187, 89, .4)',
 
@@ -125,6 +127,7 @@ export default function Basic() {
   let privacyPolicy = css({
     fontSize: '1.6rem',
     marginTop: '4vh',
+    marginBottom: '1.5vh'
   });
 
   let mb2 = css({
@@ -242,7 +245,6 @@ export default function Basic() {
             </span>{' '}
             for all of Baltimore by testing your internet speed
           </h2>
-          <img src={ThreeLayerHeroImage} width="90vw" />
         </div>
         <Form onSubmit={handleSubmit} {...contentGradient}>
           <p {...gradientParagraph}>
