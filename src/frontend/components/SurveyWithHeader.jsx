@@ -140,7 +140,7 @@ export default function SurveyWithHeader(props) {
   } else {
     return (
       <Container className={'mt-4'}>
-        <NavBar></NavBar>
+        <NavBar />
         <style type="text/css">
           {`
             h1, h2, h3 {
