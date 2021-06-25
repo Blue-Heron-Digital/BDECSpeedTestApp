@@ -91,7 +91,7 @@ export default function Basic() {
 
   let boldHighlight = css({
     fontWeight: 800,
-    backgroundColor: rgb(0, 169, 244, .4),
+    backgroundColor: RGBA(0, 169, 244, 0.4),
   }); // we had green but don't want it anymore?
   // backgroundColor: 'RGBA(104, 187, 89, .4)',
 
@@ -127,7 +127,7 @@ export default function Basic() {
   let privacyPolicy = css({
     fontSize: '1.6rem',
     marginTop: '4vh',
-    marginBottom: '1.5vh'
+    marginBottom: '1.5vh',
   });
 
   let mb2 = css({
