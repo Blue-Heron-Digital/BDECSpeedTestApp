@@ -10,7 +10,7 @@ import InternetSpeedTestLogo from '../assets/images/InternetSpeedTestLogo.png';
 
 // Bootstrap imports
 import Container from 'react-bootstrap/Container';
-import { Nav, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 export default function NavBar() {
   //   const settings = props.location.state.settings;
