@@ -42,7 +42,7 @@ export default function Basic() {
     height: '25vh',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   });
   //backgroundImage: `url(${ThreeLayerHeroImage})`
 
@@ -62,7 +62,7 @@ export default function Basic() {
 
   let bodyWrapper = css({
     display: 'flex',
-    flexFlow: 'column-nowrap',
+    flexFlow: 'column nowrap',
     alignItems: 'center',
     justifyContent: 'center',
   });
@@ -97,14 +97,22 @@ export default function Basic() {
     fontWeight: 800,
   });
 
+  let stuckTogether = css({
+    margin: '1vh 17vw',
+  })
+
   let takeTestCTA = css({
     width: '348px',
     height: '60px',
-    backgroundColor: '#00A9F4',
+    backgroundColor: 'rgba(0, 169, 244, 0.4);',
   }); // do we want 40% opacity or not on this bg color?
 
   let navBarCustomStyle = css({
     marginTop: 0,
+  });
+
+  let specialNotice = css({
+    width: '24vw',
   });
 
   let mb2 = css({
@@ -234,7 +242,7 @@ export default function Basic() {
               *
             </span>
           </p>
-          <Form.Group as={Row} controlId="formShare">
+          <Form.Group as={Row} {...stuckTogether} controlId="formShare">
             <div {...questionBox}>
               <Form.Check
                 id="location-yes"
@@ -261,22 +269,16 @@ export default function Basic() {
                 required
                 id="consent"
                 type="checkbox"
-                label="I agree"
+                label="I agree*"
               />
             </div>
           </Form.Group>
-          <p>
-            <span {...reqStar}>*</span>includes retention and publication of IP
+          <p {...specialNotice}>
+            *includes retention and publication of IP
             addresses, in addition to speed test results.
           </p>
 
-          <Button
-            className=""
-            variant="primary"
-            type="submit"
-            {...secondary}
-            {...takeTestCTA}
-          >
+          <Button className="" variant="primary" type="submit" {...takeTestCTA}>
             Take the Test
           </Button>
         </Form>
