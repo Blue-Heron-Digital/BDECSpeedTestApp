@@ -43,9 +43,8 @@ export default function Basic() {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: `url(${ThreeLayerHeroImage})`
+    backgroundImage: `url(${ThreeLayerHeroImage})`,
   });
-  
 
   let heroText = css({
     /* TODO: convert to vw and vh */
@@ -91,7 +90,7 @@ export default function Basic() {
   let boldHighlight = css({
     fontWeight: 800,
     backgroundColor: '#00A9F4',
-  }); // we had green but don't want it anymore? 
+  }); // we had green but don't want it anymore?
   // backgroundColor: 'RGBA(104, 187, 89, .4)',
 
   let reqStar = css({
@@ -103,11 +102,15 @@ export default function Basic() {
     margin: '1vh 17vw',
   });
 
+  let gradientParagraph = css({
+    marginTop: '4vh'
+  })
+
   let takeTestCTA = css({
     width: '348px',
     height: '60px',
-    backgroundColor: 'rgba(0, 169, 244, 0.4);',
   }); // do we want 40% opacity or not on this bg color?
+  // backgroundColor: 'rgba(0, 169, 244, 0.4);', doesn't really look good
 
   let navBarCustomStyle = css({
     marginTop: 0,
@@ -115,7 +118,14 @@ export default function Basic() {
 
   let specialNotice = css({
     width: '24vw',
+    margin: '0 auto',
+    marginBottom: '4vh'
   });
+
+  let privacyPolicy = css({
+    fontSize: '1.6rem',
+    marginTop: '4vh',
+  })
 
   let mb2 = css({
     '@media(max-width: 768px)': {
@@ -235,7 +245,7 @@ export default function Basic() {
           <img src={ThreeLayerHeroImage} width="90vw" />
         </div>
         <Form onSubmit={handleSubmit} {...contentGradient}>
-          <p>
+          <p {...gradientParagraph}>
             Please share your browser location for the most
             <span className="bold" {...bold}>
               {' '}
@@ -264,7 +274,7 @@ export default function Basic() {
               />
             </div>
           </Form.Group>
-          <h2>Privacy Policy</h2>
+          <h2 {...privacyPolicy}>Privacy Policy</h2>
 
           <Form.Group {...location} as={Row} controlId="formAgree">
             <div {...questionBox}>
