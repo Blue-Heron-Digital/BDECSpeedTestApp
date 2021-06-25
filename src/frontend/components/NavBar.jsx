@@ -49,90 +49,96 @@ export default function NavBar() {
 
   return (
     <Container fluid="sm">
-      <Nav
-        variant="pills"
-        className="navbar"
-        {...navbar}
-        {...navbarA}
-        onSelect={handleSelect}
-      >
-        <img src={InternetSpeedTestLogo} {...speedTestLogo} />
-        <NavDropdown {...navbarA} title="About Us" id="nav-dropdown">
-          <NavDropdown.Item
-            eventKey="Our Focus"
-            href="https://digitalequitybaltimore.org/our-focus/"
-          >
-            Our Focus
-          </NavDropdown.Item>
-          <NavDropdown.Item
-            eventKey="Our Members"
-            href="https://digitalequitybaltimore.org/members/"
-          >
-            Our Members
-          </NavDropdown.Item>
-          <NavDropdown.Item
-            eventKey="Opportunities"
-            href="https://digitalequitybaltimore.org/Opportunities/"
-          >
-            Opportunities
-          </NavDropdown.Item>
-        </NavDropdown>
-        <Nav.Item>
-          <Nav.Link
+      <Navbar collapseOnSelect expand="lg">
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav
+            variant="pills"
+            className="navbar"
+            {...navbar}
             {...navbarA}
-            eventKey="1"
-            href="https://digitalequitybaltimore.org/hotline/"
+            onSelect={handleSelect}
           >
-            Adult Learner Hotline
-          </Nav.Link>
-        </Nav.Item>
-        <NavDropdown title="FREE Internet" id="nav-dropdown" {...navbarA}>
-          <NavDropdown.Item
-            eventKey="Sign Up"
-            href="https://digitalequitybaltimore.org/freeinternet/"
-          >
-            Sign Up
-          </NavDropdown.Item>
-          <NavDropdown.Item
-            eventKey="Resources"
-            href="https://digitalequitybaltimore.org/ebb-resources/"
-          >
-            Resources
-          </NavDropdown.Item>
-          <NavDropdown.Item
-            eventKey="FAQ"
-            href="https://digitalequitybaltimore.org/ebbfaq/"
-          >
-            FAQ
-          </NavDropdown.Item>
-          <NavDropdown.Item
-            eventKey="Presentation Request"
-            href="https://digitalequitybaltimore.org/presentation-request/"
-          >
-            Presentation Request
-          </NavDropdown.Item>
-        </NavDropdown>
-        <Nav.Item>
-          <Nav.Link
-            {...navbarA}
-            eventKey="Donate"
-            className="button-secondary"
-            {...buttonSecondary}
-          >
-            SUPPORT US
-          </Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link
-            {...buttonPrimary}
-            eventKey="Main Site"
-            className="button-primary"
-            href="https://digitalequitybaltimore.org/"
-          >
-            BDEC MAIN
-          </Nav.Link>
-        </Nav.Item>
-      </Nav>
+            <img src={InternetSpeedTestLogo} {...speedTestLogo} />
+            <NavDropdown {...navbarA} title="About Us" id="nav-dropdown">
+              <NavDropdown.Item
+                eventKey="Our Focus"
+                href="https://digitalequitybaltimore.org/our-focus/"
+              >
+                Our Focus
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                eventKey="Our Members"
+                href="https://digitalequitybaltimore.org/members/"
+              >
+                Our Members
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                eventKey="Opportunities"
+                href="https://digitalequitybaltimore.org/Opportunities/"
+              >
+                Opportunities
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Item>
+              <Nav.Link
+                {...navbarA}
+                eventKey="1"
+                href="https://digitalequitybaltimore.org/hotline/"
+              >
+                Adult Learner Hotline
+              </Nav.Link>
+            </Nav.Item>
+            <NavDropdown title="FREE Internet" id="nav-dropdown" {...navbarA}>
+              <NavDropdown.Item
+                eventKey="Sign Up"
+                href="https://digitalequitybaltimore.org/freeinternet/"
+              >
+                Sign Up
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                eventKey="Resources"
+                href="https://digitalequitybaltimore.org/ebb-resources/"
+              >
+                Resources
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                eventKey="FAQ"
+                href="https://digitalequitybaltimore.org/ebbfaq/"
+              >
+                FAQ
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                eventKey="Presentation Request"
+                href="https://digitalequitybaltimore.org/presentation-request/"
+              >
+                Presentation Request
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Item>
+              <Nav.Link
+                {...navbarA}
+                eventKey="Donate"
+                className="button-secondary"
+                {...buttonSecondary}
+              >
+                SUPPORT US
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link
+                {...buttonPrimary}
+                eventKey="Main Site"
+                className="button-primary"
+                href="https://digitalequitybaltimore.org/"
+              >
+                BDEC MAIN
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </Container>
   );
 }
