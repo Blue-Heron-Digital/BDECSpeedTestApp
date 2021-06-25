@@ -225,7 +225,7 @@ export default function Basic() {
   const handleSubmit = event => {
     event.preventDefault();
     history.push({
-      pathname: '/survey',
+      pathname: '/survey-with-header',
       state: { settings: settings, locationConsent: locationConsent },
     });
   };

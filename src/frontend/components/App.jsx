@@ -88,6 +88,9 @@ export default function App() {
               path="/route-test"
               render={props => <FrontWithHeader {...props} />}
             />
+            <Route
+            path="/survey-with-header"
+            render={props => <SurveyWithHeader {...props} />} />
           </LazyBoundary>
           <Redirect to="/" />
         </Switch>
