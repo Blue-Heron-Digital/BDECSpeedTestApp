@@ -100,7 +100,7 @@ export default function Basic() {
   let takeTestCTA = css({
     width: '348px',
     height: '60px',
-    backgroundColor: 'rgba(0, 169, 244, 0.4);'
+    backgroundColor: 'rgba(0, 169, 244, 0.4);',
   }); // do we want 40% opacity or not on this bg color?
 
   let navBarCustomStyle = css({
@@ -270,12 +270,7 @@ export default function Basic() {
             addresses, in addition to speed test results.
           </p>
 
-          <Button
-            className=""
-            variant="primary"
-            type="submit"
-            {...takeTestCTA}
-          >
+          <Button className="" variant="primary" type="submit" {...takeTestCTA}>
             Take the Test
           </Button>
         </Form>

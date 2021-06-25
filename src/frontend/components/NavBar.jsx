@@ -54,7 +54,7 @@ export default function NavBar() {
         variant="pills"
         className="navbar"
         {...navbar}
-        {...navBarA}
+        {...navbarA}
         onSelect={handleSelect}
       >
         <NavDropdown {...navbarA} title="About Us" id="nav-dropdown">
