@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 
 // module imports
 import Loading from './Loading.jsx';
+import NavBar from './NavBar.jsx';
 import NdtWidget from './utils/NdtWidget.jsx';
 
 export default function SurveyWithHeader(props) {
@@ -187,7 +188,7 @@ export default function SurveyWithHeader(props) {
   }
 }
 
-Survey.propTypes = {
+SurveyWithHeader.propTypes = {
   location: PropTypes.shape({
     state: PropTypes.shape({
       settings: PropTypes.object.isRequired,
