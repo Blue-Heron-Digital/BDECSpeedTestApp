@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque');
+.header {
+  width: 100%;
+  display: flex;
+  background: #fff;
+  align-items: center;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding:0 15px;
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+.navbar{
+  padding:0px;
+}
+.nav-pills .nav-link {
+  border-radius: 0;
+  font-size: 18px;
+  color: #003952;
+  letter-spacing: 0.2px;
+  line-height: 18px;
+  font-weight: 700;
+  padding: 4px 10px 7px;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #173952;
+}
+.dropdown-menu.show{
+  top:8px;
+}
+.nav-item {
+  margin: 0 5px;
+}
+.logo{
+  margin-right:auto;
+}
+
+.dropdown-toggle::after{
+  position: relative;
+  top:3px;
+}
+
+
+.container {
+  max-width: 1250px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+.button-section a {
+  border: 1px solid #003952;
+  min-width: 144px;
+  color: #003952;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  display: inline-flex;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 5px 7px;
+}
+.button-section a.active,
+.button-section a:hover {
+  background-color: #003952;
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-section a {
+  margin-left: 25px;
+}
+.button-section a:first-child {
+  margin-left: 15px;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    max-width: 250px;
+}
+.button-section a:first-child {
+  margin-left: 10px;
+}
+.button-section a {
+  margin-left: 15px;
+}
+  .button-section a{
+    min-width:110px;
+    font-size: 15px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width:991px) {
+
+  .navbar {
+    order: 3;
+    margin-left: 0;
+  }
+  .button-section {
+    margin-right: 15px;
+}
+  
+
+}
+
+@media (max-width:991px){
+  .navbar-light .navbar-toggler{
+    outline: none;
+  }
+  .header{
+    padding:15px;
+    flex-wrap: wrap;
+  }
+
+  .navbar {
+    flex-direction: column;
+    height: auto !important
+  }
+  .navbar-collapse {
+    position: fixed;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    z-index: 2;
+}
+.nav-item {
+  margin: 5px 0;
+}
+.navbar.nav.nav-pills {
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+}
+
+@media (max-width:767px){
+  .button-section{
+    margin-top:15px;
+  }
+}

@@ -124,6 +124,7 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-bootstrap-icons": "^1.0.3-alpha5",
+    "react-circle-progress-bar": "^0.1.4",
     "react-color": "^2.18.1",
     "react-csv": "^2.0.3",
     "react-dom": "^16.13.1",
