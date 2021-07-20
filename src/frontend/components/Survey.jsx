@@ -13,7 +13,6 @@ import NdtWidget from './utils/NdtWidget.jsx';
 // css imports
 import '../css/main.css';
 import TopImage from '../assets/images/top-image.svg';
-
 export default function Survey(props) {
   const settings = props.location.state.settings;
   const locationConsent = props.location.state.locationConsent;

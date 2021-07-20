@@ -25,71 +25,75 @@ export default function ThankYou(props) {
   }, []);
 
   return (
-      <Container>
-        <div className={'main-content'}>
-          <div className="top-heading">
-            <h2>
-              Your download speed is <span>AVERAGE</span>
-            </h2>
-            <h2>
-              Your upload speed is <span>ABOVE AVERAGE</span>
-            </h2>
+    <Container>
+      <div className={'main-content'}>
+        <div className="top-heading">
+          <h2>Here are your results.</h2>
+        </div>
+
+        <div className="form-section">
+          <div className="result">
+            <div className="left-side">
+              <p>
+                Download speed is how fast your internet connection can transfer
+                data from a server. Download speeds are important for
+                downloading files, loading a website, streaming a video or
+                music.
+              </p>
+              <div className="download">
+                <Progress
+                  progress={(results.s2cRate / 1000).toFixed(2)}
+                  strokeWidth={18}
+                  gradient={[
+                    { stop: 0.0, color: '#003952' },
+                    { stop: 1, color: '#003952' },
+                  ]}
+                  background="#fff"
+                />
+                <strong>Download Mbps</strong>{' '}
+              </div>
+            </div>
+            <div className="right-side">
+              <div className="download">
+                <Progress
+                  progress={(results.c2sRate / 1000).toFixed(2)}
+                  strokeWidth={18}
+                  gradient={[
+                    { stop: 0.0, color: '#00A9F4' },
+                    { stop: 1, color: '#00A9F4' },
+                  ]}
+                  background="#fff"
+                />
+                <strong>Upload Mbps</strong>
+              </div>
+              <p>
+                Upload speed is how fast your internet connection can transfer
+                your data to a server. Upload speeds are important for sending
+                emails, sending files to other people, live video chats and
+                gaming.
+              </p>
+            </div>
           </div>
 
-          <div className="form-section">
-            <div className="result">
-              <div className="left-side">
-                <p>
-                  Download speed is how fast your internet connection can
-                  transfer data from a server. Download speeds are important for
-                  downloading files, loading a website, streaming a video or
-                  music.
-                </p>
-                <div className="download">
-                  <Progress
-                    progress={(results.s2cRate / 1000).toFixed(2)}
-                    strokeWidth={18}
-                    gradient={[
-                      { stop: 0.0, color: '#003952' },
-                      { stop: 1, color: '#003952' },
-                    ]}
-                    background="#fff"
-                  />
-                  <strong>Download Speed:</strong>{' '}
-                </div>
-              </div>
-              <div className="right-side">
-                <div className="download">
-                  <Progress
-                    progress={(results.c2sRate / 1000).toFixed(2)}
-                    strokeWidth={18}
-                    gradient={[
-                      { stop: 0.0, color: '#00A9F4' },
-                      { stop: 1, color: '#00A9F4' },
-                    ]}
-                    background="#fff"
-                  />
-                  <strong>Upload Speed:</strong>
-                </div>
-                <p>
-                  Upload speed is how fast your internet connection can transfer
-                  your data to a server. Upload speeds are important for sending
-                  emails, sending files to other people, live video chats and
-                  gaming.
-                </p>
-              </div>
-            </div>
-
-            <div className="result-btn">
-              <a href="https://digitalequitybaltimore.org/support/" target="_blank">Donate</a>
-              <a href="https://digitalequitybaltimore.org/" target="_blank" className="active">
-                Get Involved
-              </a>
-              <a href="#">Community Resources</a>
-            </div>
+          <div className="result-btn">
+            <a
+              href="https://digitalequitybaltimore.org/support/"
+              target="_blank"
+            >
+              Donate
+            </a>
+            <a
+              href="https://digitalequitybaltimore.org/"
+              target="_blank"
+              className="active"
+            >
+              Get Involved
+            </a>
+            <a href="javascript:void(0)">Community Resources</a>
           </div>
         </div>
-      </Container>
+      </div>
+    </Container>
   );
 }
 
