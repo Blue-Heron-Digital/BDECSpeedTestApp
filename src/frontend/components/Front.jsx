@@ -155,10 +155,10 @@ export default function Basic() {
   } else {
     return (
       <Container fluid="lg" className={'mt-4 mb-4'}>
-        <div>
+        {/* <div>
           <img src={logo} aria-hidden="true" {...image} />
         </div>
-        <h1 {...primary}>{settings.title}</h1>
+        <h1 {...primary}>{settings.title}</h1> */}
         <div>{parse(`<div>${settings.header}</div>`)}</div>
         <h2 {...primary}>Sharing your location</h2>
         <p>

@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Spinner from 'react-bootstrap/Spinner';
+import '../../css/main.css';
 
 // module imports
 import NDTjs from '../../assets/js/ndt-browser-client.js';
@@ -211,15 +212,13 @@ export default function NdtWidget(props) {
 
   return (
     <Container className={'loader'}>
-      <Row>
-        <Col xs="auto">
-          <Spinner animation="border" />
-        </Col>
-        <Col>{progress || 0}%</Col>
-      </Row>
-      <Row>
-        <Col>{text}</Col>
-      </Row>
+      <div class="top-heading">
+        <Spinner animation="border" />
+        <h2>
+          Test <span>{progress || 0}%</span> complete...
+        </h2>
+      </div>
+      <p>{text}</p>
     </Container>
   );
 }

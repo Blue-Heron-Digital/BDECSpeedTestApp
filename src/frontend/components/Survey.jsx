@@ -4,14 +4,15 @@ import { ReactFormGenerator } from 'react-form-builder2';
 import PropTypes from 'prop-types';
 
 // Bootstrap imports
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
 
 // module imports
 import Loading from './Loading.jsx';
 import NdtWidget from './utils/NdtWidget.jsx';
 
+// css imports
+import '../css/main.css';
+import TopImage from '../assets/images/top-image.svg';
 export default function Survey(props) {
   const settings = props.location.state.settings;
   const locationConsent = props.location.state.locationConsent;
@@ -139,39 +140,20 @@ export default function Survey(props) {
     return <div>{form}</div>;
   } else {
     return (
-      <Container className={'mt-4'}>
-        <style type="text/css">
-          {`
-            h1, h2, h3 {
-              color: ${settings.color_one};
-            }
-            .form-group a {
-              color: ${settings.color_two};
-            }
-            .form-group a:active, .form-group a:focus, .form-group a:hover {
-              color: filter: brightness(75%) !important;
-            }
-            .btn-toolbar input {
-              background-color: ${settings.color_two};
-              border: 2px solid ${settings.color_two};
-              color: #fff;
-              cursor: pointer;
-            }
-            .btn-toolbar input.disabled {
-              background-color: filter(50%);
-              border: 2px solid #ccc;
-              color: #ccc;
-              cursor: not-allowed;
-            }
-          `}
-        </style>
-        {testsComplete ? (
-          <div>You may now submit your survey to see your results.</div>
-        ) : (
-          <NdtWidget onFinish={onFinish} locationConsent={locationConsent} />
-        )}
-        <Row>
-          <Col>
+      <Container>
+        <div className={'main-content'}>
+          {testsComplete ? (
+            <div className="top-heading">
+              <h2>You may now submit your survey to see your results.</h2>
+            </div>
+          ) : (
+            <NdtWidget onFinish={onFinish} locationConsent={locationConsent} />
+          )}
+
+          <div class="top-image">
+            <img src={TopImage} {...TopImage} />
+          </div>
+          <div className="form">
             <ReactFormGenerator
               answer_data={{}}
               form_method="POST"
@@ -179,8 +161,8 @@ export default function Survey(props) {
               onSubmit={uploadFormData}
               data={form}
             />
-          </Col>
-        </Row>
+          </div>
+        </div>
       </Container>
     );
   }
