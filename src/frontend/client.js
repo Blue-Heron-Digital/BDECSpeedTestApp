@@ -6,6 +6,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { rehydrateMarks } from 'react-imported-component';
 import App from './components/App.jsx';
 import Loading from './components/Loading.jsx';
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
+
+// css imports
+import './css/main.css';
 
 export const hydrate = (app, element) => () => {
   ReactDOM.hydrate(app, element);
@@ -23,7 +28,9 @@ export const start = ({ isProduction, document, module, hydrate }) => {
     <Suspense fallback={Loading}>
       <HelmetProvider>
         <BrowserRouter>
+          <Header />
           <App />
+          <Footer />
         </BrowserRouter>
       </HelmetProvider>
     </Suspense>
