@@ -150,7 +150,7 @@ export default function Survey(props) {
             <NdtWidget onFinish={onFinish} locationConsent={locationConsent} />
           )}
 
-          <div class="top-image">
+          <div className="top-image">
             <img src={TopImage} {...TopImage} />
           </div>
           <div className="form">

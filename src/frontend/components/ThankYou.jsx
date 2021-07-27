@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'glamor';
-import parse from 'html-react-parser';
 
 // Bootstrap imports
 import Container from 'react-bootstrap/Container';
@@ -15,10 +14,25 @@ export default function ThankYou(props) {
   const results = props.location.state.results;
   const settings = props.location.state.settings;
 
-  // style rules
-  let h1 = css({
-    color: settings.color_one,
-  });
+  const donateBtn = (
+    <a
+      target="_blank"
+      rel="noreferrer"
+      href="https://digitalequitybaltimore.org/support/"
+    >
+      Donate
+    </a>
+  );
+  const getInvolvedBtn = (
+    <a
+      target="_blank"
+      rel="noreferrer"
+      className="active"
+      href="https://digitalequitybaltimore.org"
+    >
+      Get Involved
+    </a>
+  );
 
   useEffect(() => {
     document.title = `${settings.title} | Thank You`;
@@ -76,19 +90,8 @@ export default function ThankYou(props) {
           </div>
 
           <div className="result-btn">
-            <a
-              href="https://digitalequitybaltimore.org/support/"
-              target="_blank"
-            >
-              Donate
-            </a>
-            <a
-              href="https://digitalequitybaltimore.org/"
-              target="_blank"
-              className="active"
-            >
-              Get Involved
-            </a>
+            {donateBtn}
+            {getInvolvedBtn}
             <a href="javascript:void(0)">Community Resources</a>
           </div>
         </div>

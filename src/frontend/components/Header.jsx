@@ -1,6 +1,6 @@
 // base imports
 import React from 'react';
-import { css, hover } from 'glamor';
+import { css } from 'glamor';
 
 // css imports
 import '../css/header.css';
@@ -19,19 +19,6 @@ export default function NavBar() {
     console.log(`selected ${eventKey}`);
   };
 
-  // style rules
-  let buttonPrimary = css({
-    backgroundColor: '#003952',
-    color: 'white',
-    ':hover': {
-      color: 'white',
-    },
-  });
-
-  let buttonSecondary = css({
-    border: '1px solid #003952',
-  });
-
   let navbarA = css({
     color: '#003952 !important',
     ':hover': {
@@ -45,14 +32,13 @@ export default function NavBar() {
     height: '88px',
   });
 
-  let speedTestLogo = css({
-    height: '3vh',
-  });
-
   return (
     <div className="header">
-      <img className="logo" src={InternetSpeedTestLogo}
-                alt="InternetSpeedTest" />
+      <img
+        className="logo"
+        src={InternetSpeedTestLogo}
+        alt="InternetSpeedTest"
+      />
       <Navbar collapseOnSelect expand="lg">
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -63,7 +49,6 @@ export default function NavBar() {
             {...navbarA}
             onSelect={handleSelect}
           >
-            
             <NavDropdown {...navbarA} title="About Us" id="nav-dropdown">
               <NavDropdown.Item
                 eventKey="Our Focus"
@@ -122,10 +107,12 @@ export default function NavBar() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <div class="button-section">
-                    <a href="#">SUPPORT US</a> 
-                    <a class="active" href="https://digitalequitybaltimore.org/">BDEC MAIN</a>
-                 </div>
+      <div className="button-section">
+        <a href="#">SUPPORT US</a>
+        <a className="active" href="https://digitalequitybaltimore.org/">
+          BDEC MAIN
+        </a>
+      </div>
     </div>
   );
 }
