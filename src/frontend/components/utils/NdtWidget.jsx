@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash/core';
 
 // Bootstrap imports
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
 import Spinner from 'react-bootstrap/Spinner';
 import '../../css/main.css';
 
@@ -212,7 +210,7 @@ export default function NdtWidget(props) {
 
   return (
     <Container className={'loader'}>
-      <div class="top-heading">
+      <div className="top-heading">
         <Spinner animation="border" />
         <h2>
           Test <span>{progress || 0}%</span> complete...

@@ -6,7 +6,7 @@ import '../css/footer.css';
 import Facebook from '../assets/images/facebook.svg';
 
 const Footer = () => (
-  <div class="footer">
+  <div className="footer">
     <p>Internet Speed Test</p>
     <ul>
       <li>Created by Blue Heron Digital</li>

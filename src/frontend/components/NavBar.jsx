@@ -1,6 +1,6 @@
 // base imports
 import React from 'react';
-import { css, hover } from 'glamor';
+import { css } from 'glamor';
 
 // css imports
 import '../css/navbar.css';
