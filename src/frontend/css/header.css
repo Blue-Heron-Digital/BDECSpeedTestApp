@@ -46,7 +46,16 @@
   padding: 0 15px;
   margin: 0 auto;
 }
+#dropdown-about-us, #dropdown-free-internet {
+  background: none;
+  font-size: 18px;
+  margin: 0 auto;
+  text-decoration: none;
+}
 
+.my-nav-dropdown .dropdown-menu {
+  transform: translate(0px, 52px) !important;
+}
 
 .button-section a {
   border: 1px solid #003952;
