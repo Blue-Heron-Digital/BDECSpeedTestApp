@@ -121,7 +121,7 @@ export default function HeaderCustom() {
       </Navbar>
       <div className="button-section">
         <a href="#">SUPPORT US</a>
-        <a className="active" href="https://digitalequitybaltimore.org/">
+        <a className="active" href="https://digitalequitybaltimore.org/support/">
           BDEC MAIN
         </a>
       </div>
