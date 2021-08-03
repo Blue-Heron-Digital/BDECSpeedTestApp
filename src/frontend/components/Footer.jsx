@@ -9,12 +9,12 @@ const Footer = () => (
   <div className="footer">
     <p>Internet Speed Test</p>
     <ul>
-      <li>Created by Blue Heron Digital</li>
+      <li>Created by <a href="https://www.blueherondigital.com/" target="_blank">Blue Heron Digital</a></li>
       <li>
         <a href="#">Privacy Policy</a>
       </li>
       <li>
-        <a href="#">
+        <a href="https://www.facebook.com/BaltimoreDEC" target="_blank">
           <img src={Facebook} {...Facebook} />
         </a>
       </li>

@@ -8,7 +8,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import 'react-form-builder2/dist/app.css';
 import Error from './Error.jsx';
 
-const Front = lazy(() => import('./Front.jsx'));
+const FrontCustom = lazy(() => import('./FrontCustom.jsx'));
 const FrontWithHeader = lazy(() => import('./FrontWithHeader.jsx'));
 const Loading = lazy(() => import('./Loading.jsx'));
 const Login = lazy(() => import('./Login.jsx'));
@@ -76,7 +76,7 @@ export default function App() {
       <ErrorBoundary FallbackComponent={Error}>
         <Switch>
           <LazyBoundary fallback={Loading}>
-            <Route path="/" exact component={Front} />
+            <Route path="/" exact component={FrontCustom} />
             <Route path="/login" render={props => <Login {...props} />} />
             <Route
               path="/admin"

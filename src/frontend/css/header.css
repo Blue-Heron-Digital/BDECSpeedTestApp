@@ -31,7 +31,7 @@
 .nav-item {
   margin: 0 5px;
 }
-.logo{
+.logo, .logo-anchor{
   margin-right:auto;
 }
 

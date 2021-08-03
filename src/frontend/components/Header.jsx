@@ -34,11 +34,13 @@ export default function HeaderCustom() {
 
   return (
     <div className="header">
-      <img
-        className="logo"
-        src={InternetSpeedTestLogo}
-        alt="InternetSpeedTest"
-      />
+      <a href="/" className="logo-anchor">
+        <img
+          className="logo"
+          src={InternetSpeedTestLogo}
+          alt="InternetSpeedTest"
+        />
+      </a>
       <Navbar collapseOnSelect expand="lg">
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
