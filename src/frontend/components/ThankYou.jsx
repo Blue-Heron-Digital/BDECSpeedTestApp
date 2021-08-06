@@ -5,7 +5,8 @@ import { css } from 'glamor';
 
 // Bootstrap imports
 import Container from 'react-bootstrap/Container';
-import Progress from 'react-circle-progress-bar';
+// import Progress from 'react-circle-progress-bar';
+import Progress from './ProgressBar.jsx';
 
 // css imports
 import '../css/main.css';

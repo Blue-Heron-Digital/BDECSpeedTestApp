@@ -33,55 +33,33 @@ export default function FrontCustom() {
 
   // style rules
   let location = css({
-    marginLeft: '20px',
+    maxWidth: '313px',
+    width:'100%',
+    margin:'0 auto',
   });
 
   let heroImageContainer = css({
-    width: '86vw',
-    height: '43vh',
-    display: 'flex',
-    paddingTop: '2vh',
-    justifyContent: 'center',
-    background:
-      'linear-gradient(180deg, rgba(255, 255, 255, 1) 100%, #FFFFFF 0%), #E8E8E8',
-    backgroundImage: `url(${ThreeLayerHeroImage})`,
+
   }); //this gradient isn't working as planned, it's showing as all grey but is supposed to be white at the top fading to grey at the bottom
 
   let heroText = css({
-    /* TODO: convert to vw and vh */
-    width: '730px',
-    height: '120px',
-    left: '355px',
-    top: '172px',
-    fontFamily: 'Darker Grotesque',
-    fontStyle: 'normal',
-    fontWeight: 600,
-    fontSize: '36px',
-    lineHeight: '40px',
-    textAlign: 'center',
+
   });
 
   let bodyWrapper = css({
-    display: 'flex',
-    flexFlow: 'column nowrap',
-    alignItems: 'center',
-    justifyContent: 'center',
+
   });
 
   let contentGradient = css({
-    width: '86vw',
-    height: '50vh',
-    textAlign: 'center',
-    background:
-      'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), #E8E8E8',
+
   });
 
   let questionBox = css({
-    minWidth: '20vw',
-    padding: '1vw',
+    padding: '8px',
     textAlign: 'left',
-    margin: '0  auto',
+    margin: '5px  auto',
     backgroundColor: 'white',
+    width: '100%',
   });
 
   let bold = css({
@@ -100,11 +78,15 @@ export default function FrontCustom() {
   });
 
   let stuckTogether = css({
-    margin: '1vh 17vw',
+    margin: '15px 0',
+    maxWidth: '313px',
+    width:'100%',
+    margin:'0 auto',
   });
 
   let gradientParagraph = css({
     marginTop: '4vh',
+    textAlign: 'center',
   });
 
   let takeTestCTA = css({
@@ -118,15 +100,16 @@ export default function FrontCustom() {
   });
 
   let specialNotice = css({
-    width: '24vw',
-    margin: '0 auto',
-    marginBottom: '4vh',
+    margin: '15px auto 30px',
+    maxWidth: '504px',
+    textAlign: 'center',
+    padding: '0 10px',
   });
 
   let privacyPolicy = css({
     fontSize: '1.6rem',
-    marginTop: '4vh',
-    marginBottom: '1.5vh',
+    margin: '20px 0',
+    textAlign: 'center',
   });
 
   const handleColors = settings => {
@@ -227,17 +210,21 @@ export default function FrontCustom() {
     return <Loading />;
   } else {
     return (
-      <Container fluid="" {...bodyWrapper}>
-        <div className="hero-img-container" {...heroImageContainer}>
-          <h2 className="hero-text" {...heroText}>
+      <Container>
+         <div className={'main-content'}>
+        <div className="top-heading">
+          <h2>
             Help us tackle the digital divide and ensure
-            <span className="bold-highlight" {...boldHighlight}>
+            <span>
               {' '}
               equal internet connectivity
             </span>{' '}
             for all of Baltimore by testing your internet speed
           </h2>
         </div>
+        <div className="top-image">
+            <img src={ThreeLayerHeroImage} {...ThreeLayerHeroImage} />
+          </div>
         <Form onSubmit={handleSubmit} {...contentGradient}>
           <p {...gradientParagraph}>
             Please share your browser location for the most
@@ -289,6 +276,7 @@ export default function FrontCustom() {
             Take the Test
           </Button>
         </Form>
+        </div>
       </Container>
     );
   }

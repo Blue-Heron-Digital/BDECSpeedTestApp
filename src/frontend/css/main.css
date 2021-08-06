@@ -386,7 +386,7 @@ color: #003952;
   }
   .react-form-builder-form .SortableItem.rfb-item{
     width:100%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .button-section a {
     min-width: 135px;
@@ -408,8 +408,9 @@ color: #003952;
     padding: 50px 0;
   }
   .top-heading h2 {
-    font-size: 29px;
-    line-height: 36px;
+    font-size: 26px;
+    line-height: 31px;
+    padding:0 5px;
   }
   .form-section {
     padding: 0 15px;
