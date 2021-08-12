@@ -122,8 +122,8 @@ export default function HeaderCustom() {
         </Navbar.Collapse>
       </Navbar>
       <div className="button-section">
-        <a href="#">SUPPORT US</a>
-        <a className="active" href="https://digitalequitybaltimore.org/support/">
+       <a href="https://digitalequitybaltimore.org/support/">SUPPORT US</a>
+        <a className="active" href="https://digitalequitybaltimore.org">
           BDEC MAIN
         </a>
       </div>
